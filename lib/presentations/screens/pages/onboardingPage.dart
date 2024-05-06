@@ -21,7 +21,7 @@ class OnBoardingPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(30),
               child: SvgPicture.asset(
-                "$ImageManager.onBoarding",
+                ImageManager.onBoarding,
                 height: SizeValueManager.h400,
               ),
             ),

@@ -165,7 +165,7 @@ class LoginPage extends StatelessWidget {
                       color: kSecondary,
                       borderRadius: BorderRadius.circular(12),
                     ),
-                    child: Image(image: AssetImage("$ImageManager.Google")),
+                    child: Image(image: AssetImage(ImageManager.Google)),
                   ),
                   SizedBox(
                     width: 20,
