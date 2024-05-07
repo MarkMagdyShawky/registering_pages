@@ -5,6 +5,7 @@ import 'package:onboarding_signup_login_pages/core/resources/imageManager.dart';
 import 'package:onboarding_signup_login_pages/core/resources/stingManager.dart';
 import 'package:onboarding_signup_login_pages/presentations/screens/widgets/customMaterialButton.dart';
 import 'package:onboarding_signup_login_pages/presentations/screens/widgets/customSubtitle.dart';
+import 'package:onboarding_signup_login_pages/presentations/screens/widgets/customTextButton.dart';
 import 'package:onboarding_signup_login_pages/presentations/screens/widgets/customTextField.dart';
 import 'package:onboarding_signup_login_pages/presentations/screens/widgets/customTitle.dart';
 
@@ -60,20 +61,12 @@ class SignUpPage extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 25),
                 child: Column(
                   children: [
-                    CustomMaterialButton(BtnName: "Sign Up", BtnWidth: 140),
+                    CustomMaterialButton(BtnName: "Sign Up", BtnWidth: 140,NextPage: "Login",),
                     SizedBox(
                       height: 30,
                     ),
                     // Text btn2
-                    TextButton(
-                        onPressed: () {},
-                        child: Text(
-                          "Already have an account",
-                          style: TextStyle(
-                            fontSize: 20,
-                            color: Colors.black,
-                          ),
-                        )),
+                    CustomTextButton(BtnName: "Already have an account", NextPage: "Login")
                   ],
                 ),
               ),

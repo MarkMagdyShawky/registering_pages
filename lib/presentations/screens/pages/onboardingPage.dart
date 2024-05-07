@@ -7,6 +7,7 @@ import 'package:onboarding_signup_login_pages/core/resources/sizeManager.dart';
 import 'package:onboarding_signup_login_pages/core/resources/stingManager.dart';
 import 'package:onboarding_signup_login_pages/presentations/screens/widgets/customMaterialButton.dart';
 import 'package:onboarding_signup_login_pages/presentations/screens/widgets/customSubtitle.dart';
+import 'package:onboarding_signup_login_pages/presentations/screens/widgets/customTextButton.dart';
 import 'package:onboarding_signup_login_pages/presentations/screens/widgets/customTitle.dart';
 
 class OnBoardingPage extends StatelessWidget {
@@ -48,17 +49,10 @@ class OnBoardingPage extends StatelessWidget {
                   CustomMaterialButton(
                     BtnName: "Login",
                     BtnWidth: 60.0,
+                    NextPage: "Login",
                   ),
                   //Register btn
-                  TextButton(
-                      onPressed: () {},
-                      child: Text(
-                        "Register",
-                        style: TextStyle(
-                          fontSize: FontSizeManager.f20,
-                          color: Colors.black,
-                        ),
-                      ))
+                  CustomTextButton(BtnName: "Register",NextPage: "Signup",)
                 ],
               ),
             )

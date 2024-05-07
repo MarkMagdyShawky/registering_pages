@@ -3,6 +3,7 @@ import 'package:onboarding_signup_login_pages/core/resources/imageManager.dart';
 import 'package:onboarding_signup_login_pages/core/resources/stingManager.dart';
 import 'package:onboarding_signup_login_pages/presentations/screens/widgets/customMaterialButton.dart';
 import 'package:onboarding_signup_login_pages/presentations/screens/widgets/customSubtitle.dart';
+import 'package:onboarding_signup_login_pages/presentations/screens/widgets/customTextButton.dart';
 import 'package:onboarding_signup_login_pages/presentations/screens/widgets/customTextField.dart';
 import 'package:onboarding_signup_login_pages/presentations/screens/widgets/customTitle.dart';
 
@@ -67,19 +68,11 @@ class LoginPage extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 25),
                 child: Column(
                   children: [
-                    CustomMaterialButton(BtnName: "Login", BtnWidth: 148),
+                    CustomMaterialButton(BtnName: "Login", BtnWidth: 148,NextPage: "Onboarding",),
                     SizedBox(
                       height: 30,
                     ),
-                    TextButton(
-                        onPressed: () {},
-                        child: Text(
-                          "Create new account",
-                          style: TextStyle(
-                            fontSize: 20,
-                            color: Colors.black,
-                          ),
-                        )),
+                   CustomTextButton(BtnName: "Create new account", NextPage: "Signup")
                   ],
                 ),
               ),
