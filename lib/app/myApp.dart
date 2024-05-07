@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:onboarding_signup_login_pages/presentations/screens/pages/loginPage.dart';
 import 'package:onboarding_signup_login_pages/presentations/screens/pages/onboardingPage.dart';
 
 class MyApp extends StatefulWidget {
@@ -14,7 +15,7 @@ class _MyAppState extends State<MyApp> {
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: "Acme-Regular"),
-      home: OnBoardingPage(),
+      home: LoginPage(),
     );
   }
 }

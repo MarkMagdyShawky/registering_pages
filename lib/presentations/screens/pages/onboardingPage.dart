@@ -6,6 +6,8 @@ import 'package:onboarding_signup_login_pages/core/resources/imageManager.dart';
 import 'package:onboarding_signup_login_pages/core/resources/sizeManager.dart';
 import 'package:onboarding_signup_login_pages/core/resources/stingManager.dart';
 import 'package:onboarding_signup_login_pages/presentations/screens/widgets/customMaterialButton.dart';
+import 'package:onboarding_signup_login_pages/presentations/screens/widgets/customSubtitle.dart';
+import 'package:onboarding_signup_login_pages/presentations/screens/widgets/customTitle.dart';
 
 class OnBoardingPage extends StatelessWidget {
   const OnBoardingPage({super.key});
@@ -28,27 +30,13 @@ class OnBoardingPage extends StatelessWidget {
             // Text 1
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 18),
-              child: Text(
-                StringManager.OnBoardingDisc,
-                style: TextStyle(
-                  fontSize: FontSizeManager.f30,
-                  fontWeight: FontWeight.bold,
-                  color: kPrimary,
-                ),
-                textAlign: TextAlign.center,
-              ),
+              child: CustomTitle(title: StringManager.OnBoardingDisc,)
             )
             // Text2
             ,
             Padding(
               padding: const EdgeInsets.only(top: 25),
-              child: Text(
-                StringManager.OnBoardingDisc2,
-                style: TextStyle(
-                  fontSize: FontSizeManager.f18,
-                ),
-                textAlign: TextAlign.center,
-              ),
+              child: CustomSubtitle(title: StringManager.OnBoardingDisc2),
             ),
             // Buttons :
             Padding(

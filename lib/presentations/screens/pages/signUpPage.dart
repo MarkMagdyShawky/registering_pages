@@ -2,7 +2,11 @@
 import 'package:flutter/material.dart';
 import 'package:onboarding_signup_login_pages/core/resources/colorManager.dart';
 import 'package:onboarding_signup_login_pages/core/resources/imageManager.dart';
+import 'package:onboarding_signup_login_pages/core/resources/stingManager.dart';
 import 'package:onboarding_signup_login_pages/presentations/screens/widgets/customMaterialButton.dart';
+import 'package:onboarding_signup_login_pages/presentations/screens/widgets/customSubtitle.dart';
+import 'package:onboarding_signup_login_pages/presentations/screens/widgets/customTextField.dart';
+import 'package:onboarding_signup_login_pages/presentations/screens/widgets/customTitle.dart';
 
 class SignUpPage extends StatelessWidget {
   const SignUpPage({super.key});
@@ -21,26 +25,12 @@ class SignUpPage extends StatelessWidget {
                 child: Column(
                   children: [
                     //title
-                    Text(
-                      "Create Account",
-                      style: TextStyle(
-                        fontSize: 30,
-                        fontWeight: FontWeight.bold,
-                        color: kPrimary,
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
+                    CustomTitle(title: StringManager.SignUpTitle,),
                     SizedBox(
                       height: 25,
                     ),
                     // caption
-                    Text(
-                      "create an account so you can explore all the existing jobs",
-                      style: TextStyle(
-                        fontSize: 22,
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
+                    CustomSubtitle(title: StringManager.SignUpSubtitle),
                   ],
                 ),
               ),
@@ -49,60 +39,18 @@ class SignUpPage extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 20),
                 child: Column(
                   children: [
-                    TextField(
-                      decoration: InputDecoration(
-                        prefixIcon: Icon(Icons.email),
-                        hintText: "Email",
-                        fillColor: kSecondary,
-                        filled: true,
-                        enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white, width: 0),
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: kPrimary, width: 2),
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                      ),
-                    ),
+                    CustomTextField(HintName: "Email",icone: Icons.email_rounded,)
+,
                     SizedBox(
                       height: 30,
                     ),
-                    TextField(
-                      decoration: InputDecoration(
-                        prefixIcon: Icon(Icons.password),
-                        hintText: "Password",
-                        fillColor: kSecondary,
-                        filled: true,
-                        enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white, width: 0),
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: kPrimary, width: 2),
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                      ),
-                    ),
+                    CustomTextField(HintName: "Password",icone: Icons.password_outlined,)
+                    ,
                     SizedBox(
                       height: 30,
                     ),
-                    TextField(
-                      decoration: InputDecoration(
-                        prefixIcon: Icon(Icons.password),
-                        hintText: "Confirm Password",
-                        fillColor: kSecondary,
-                        filled: true,
-                        enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white, width: 0),
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: kPrimary, width: 2),
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                      ),
-                    ),
+                    CustomTextField(HintName: "Confirm Password",icone: Icons.password_outlined,)
+                    ,
                   ],
                 ),
               ),

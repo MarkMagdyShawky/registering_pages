@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:onboarding_signup_login_pages/core/resources/imageManager.dart';
+import 'package:onboarding_signup_login_pages/core/resources/stingManager.dart';
+import 'package:onboarding_signup_login_pages/presentations/screens/widgets/customMaterialButton.dart';
+import 'package:onboarding_signup_login_pages/presentations/screens/widgets/customSubtitle.dart';
+import 'package:onboarding_signup_login_pages/presentations/screens/widgets/customTextField.dart';
+import 'package:onboarding_signup_login_pages/presentations/screens/widgets/customTitle.dart';
 
 import '../../../core/resources/colorManager.dart';
 
@@ -20,26 +25,12 @@ class LoginPage extends StatelessWidget {
                 child: Column(
                   children: [
                     //title
-                    Text(
-                      "Login Here",
-                      style: TextStyle(
-                        fontSize: 30,
-                        fontWeight: FontWeight.bold,
-                        color: kPrimary,
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
+                    CustomTitle(title: StringManager.LoginTitle),
                     SizedBox(
                       height: 25,
                     ),
                     // caption
-                    Text(
-                      "Welcome Back to the app you've missed",
-                      style: TextStyle(
-                        fontSize: 22,
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
+                    CustomSubtitle(title: StringManager.LoginSubtitle),
                   ],
                 ),
               ),
@@ -48,41 +39,12 @@ class LoginPage extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 20),
                 child: Column(
                   children: [
-                    TextField(
-                      decoration: InputDecoration(
-                        prefixIcon: Icon(Icons.email),
-                        hintText: "Email",
-                        fillColor: kSecondary,
-                        filled: true,
-                        enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white, width: 0),
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: kPrimary, width: 2),
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                      ),
-                    ),
+                    CustomTextField(HintName: "Email",icone: Icons.email_rounded,),
+
                     SizedBox(
                       height: 30,
                     ),
-                    TextField(
-                      decoration: InputDecoration(
-                        prefixIcon: Icon(Icons.password),
-                        hintText: "Password",
-                        fillColor: kSecondary,
-                        filled: true,
-                        enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white, width: 0),
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: kPrimary, width: 2),
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                      ),
-                    )
+                    CustomTextField(HintName: "Password",icone: Icons.password_outlined,)
                   ],
                 ),
               ),
@@ -105,24 +67,7 @@ class LoginPage extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 25),
                 child: Column(
                   children: [
-                    MaterialButton(
-                      onPressed: () {},
-                      minWidth: double.infinity,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      color: kPrimary,
-                      padding: EdgeInsets.symmetric(vertical: 15),
-                      elevation: 5,
-                      textColor: Colors.white,
-                      focusColor: kSecondary,
-                      child: Text(
-                        "Sign Up",
-                        style: TextStyle(
-                          fontSize: 20,
-                        ),
-                      ),
-                    ),
+                    CustomMaterialButton(BtnName: "Login", BtnWidth: 148),
                     SizedBox(
                       height: 30,
                     ),
