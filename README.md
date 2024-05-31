@@ -10,5 +10,8 @@
 ## Dependencies
 - Flutter
 - Dart
+
+## Future Work
+- Adding firebase soon!
   ## Contributors
 - __Mark Magdy__
