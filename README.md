@@ -13,5 +13,6 @@
 
 ## Future Work
 - Adding firebase soon!
-  ## Contributors
+
+## Contributors
 - __Mark Magdy__
