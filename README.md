@@ -10,3 +10,5 @@
 ## Dependencies
 - Flutter
 - Dart
+  ## Contributors
+- __Mark Magdy__
